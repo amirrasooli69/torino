@@ -1,5 +1,6 @@
 import Header from "@modules/Header";
 import "./globals.css";
+import { yekan } from "@/utils/fonts";
 
 export const metadata = {
   title: "Torino App",
@@ -9,8 +10,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>
-      <Header />
+      <body className={yekan.className}>
+        <Header />
         {children}
       </body>
     </html>

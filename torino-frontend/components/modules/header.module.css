@@ -2,12 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 31px;
 }
 
 .register_mobile {
   width: 40px;
   height: 40px;
-  margin: 25px 31px;
+  margin-top: 25px;
   border: 1px solid #28a745;
   border-radius: 8px;
 }
@@ -47,6 +48,9 @@
 .main_nav a {
     text-decoration: none;
     color: black;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .main_nav li:last-child a{
@@ -58,7 +62,7 @@
 }
 
 .hamberger_menu {
-    margin: 25px auto;
+    margin-top: 20px;
 }
 
 .hamberger_menu span {
@@ -85,8 +89,7 @@
         display: none;
     }
     .header {
-        width: 1440px;
-        margin: auto;
+        margin: auto ;
     }
     .web {
         display: flex;
