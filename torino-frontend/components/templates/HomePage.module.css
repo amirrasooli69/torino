@@ -1,0 +1,12 @@
+.baner{
+    width: 100%;
+
+}
+@media(min-with: 390){
+    .container {
+        width: 390;
+    }
+    .baner {
+        height: 119;
+    }
+}

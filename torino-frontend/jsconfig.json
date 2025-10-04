@@ -1,7 +1,12 @@
 {
-  "compilerOptions": {
+ "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@modules/*": ["components/modules/*"],
+      "@/components/*": ["components/*"],
+      "@/templates/*": ["components/templates/*"],
+      "@/svg/*": ["public/svg/*"],
+      "@/images/*": ["public/images/*"]
     }
   }
 }
