@@ -1,4 +1,4 @@
-import Header from "@/modules/Header";
+import Header from "@/components/modules/Header";
 import "./globals.css";
 import { yekan } from "@/utils/fonts";
 

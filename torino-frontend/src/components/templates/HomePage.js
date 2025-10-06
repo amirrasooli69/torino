@@ -4,7 +4,7 @@ import styles from "@/templates/HomePage.module.css";
 import baner from "@/images/baner.png";
 import location from "@/images/location.png";
 import global from "@/images/global-search.png";
-import DatePickerCustom from "@/modules/DatePickerCustom";
+// import DatePickerCustom from "@/modules/DatePickerCustom";
 
 function HomePage() {
   return (
@@ -32,7 +32,7 @@ function HomePage() {
           </select>
         </div>
         {/* <div className={styles.date}> */}
-          <DatePickerCustom className={styles.date}/>
+          {/* <DatePickerCustom className={styles.date}/> */}
         {/* </div> */}
         <button className={styles.btnSearch}>جستجو</button>
       </div>
