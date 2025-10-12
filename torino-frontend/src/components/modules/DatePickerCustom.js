@@ -6,7 +6,7 @@ function DatePickerCustom() {
     const [from, setFrom] = useState("");
     const [to, setTo] = useState(new Date())
   return (
-    <DatePicker onChange={(e) => console.log(e.from, e.to)} range />
+    <DatePicker onChange={(e) => console.log(e.from, e.to)} range accentColor="#28A745"/>
   )
 }
 

@@ -32,7 +32,7 @@ function HomePage() {
             <option>مقصد</option>
           </select>
         </div>
-        <div className={styles.date}>
+        <div >
           <DatePickerCustom className={styles.date}/>
         </div>
         <button className={styles.btnSearch}>جستجو</button>
