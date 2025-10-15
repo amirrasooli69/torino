@@ -1,44 +1,46 @@
-.baner {
+/* .baner {
   margin-top: 10px;
   width: 100%;
   height: 119px;
-}
+} */
 
-.detail {
+/* .detail {
   margin: 25px 0;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-}
+} */
 
-.detail span {
+/* .detail span {
   color: #28a745;
-}
+} */
 
-.search {
+/* .search {
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.select {
+/* .select {
   padding: 12px;
-}
-.location {
+} */
+/* .location {
   width: 160px;
   height: 47px;
   border: 1px solid #00000026;
   border-radius: 12px;
   text-align: center;
-}
-.global {
+} */
+
+/* .global {
   width: 160px;
   height: 47px;
   border: 1px solid #00000026;
   border-radius: 12px;
   text-align: center;
-}
+} */
+
 .date {   
   width: 328px;
   height: 47px;
@@ -46,6 +48,7 @@
   border: 1px solid #00000026;
   border-radius: 12px;
 }
+
 .btnSearch {
     color: #fff;
     background-color: #28A745;
@@ -57,11 +60,11 @@
     font-size: 20px;
     font-weight: 400;
 }
-@media (min-width: 391) {
+/* @media (min-width: 391) {
   .baner {
     height: 350px;
   }
   .detail {
     font-size: 28px;
   }
-}
+} */

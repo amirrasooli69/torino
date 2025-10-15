@@ -9,33 +9,31 @@ import DatePickerCustom from "../modules/DatePickerCustom";
 
 function HomePage() {
   return (
-    <div className={styles.container}>
-      {/* <div className={styles.baner}> */}
+    <div>
       <Image
         src={baner}
-        className={styles.baner}
+        className="w-full h-[119px] sm:h-[350px]"
         width={1440}
         height={350}
         alt="baner"
         priority
       />
-      {/* </div> */}
-      <div className={styles.detail}>
-        <span>تورینو</span> برگزار کننده بهترین تور های داخلی و خارجی
+      
+      <div className="mt-6 text-center text-base font-semibold sm:text-2xl">
+        <span className="text-[#28a745]">تورینو</span> برگزار کننده بهترین تور های داخلی و خارجی
       </div>
-      <div className={styles.search}>
-        <div className={styles.select}>
-          <select className={styles.location}>
-            <option>مبدا</option>
-          </select>
-          <select className={styles.global}>
+      <div className="w-full text-center flex flex-col items-center">
+        <div className="">
+          <select className="w-[160px] h-[47px] border border-[#00000026] rounded-xl text-center">
             <option>مقصد</option>
           </select>
+          <select className="w-[160px] h-[47px] border border-[#00000026] rounded-xl text-center">
+            <option>مبدا</option>
+          </select>
         </div>
-        <div >
-          <DatePickerCustom className={styles.date}/>
-        </div>
-        <button className={styles.btnSearch}>جستجو</button>
+        
+          <DatePickerCustom />
+        <button className="w-[328px] h-[47px] text-center  text-white bg-[#28a745] rounded-xl text-xl font-normal ">جستجو</button>
       </div>
     </div>
   );
