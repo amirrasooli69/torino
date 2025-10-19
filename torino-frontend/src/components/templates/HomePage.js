@@ -18,9 +18,10 @@ function HomePage() {
         alt="baner"
         priority
       />
-      
+
       <div className="mt-6 text-center text-base font-semibold sm:text-2xl">
-        <span className="text-[#28a745]">تورینو</span> برگزار کننده بهترین تور های داخلی و خارجی
+        <span className="text-[#28a745]">تورینو</span> برگزار کننده بهترین تور
+        های داخلی و خارجی
       </div>
       <div className="w-full text-center flex flex-col items-center">
         <div className="">
@@ -31,9 +32,10 @@ function HomePage() {
             <option>مبدا</option>
           </select>
         </div>
-        
-          <DatePickerCustom />
-        <button className="w-[328px] h-[47px] text-center  text-white bg-[#28a745] rounded-xl text-xl font-normal ">جستجو</button>
+
+
+        <DatePickerCustom />
+        <button className="w-[328px] h-[47px] text-center  text-white bg-[#28a745] rounded-xl text-xl font-normal mt-5">جستجو</button>
       </div>
     </div>
   );
