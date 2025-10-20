@@ -1,15 +1,13 @@
 import Image from "next/image";
-import styles from "./header.module.css";
 import login from "@/svg/login.svg";
 import profile from "@/images/profile.png";
 import logo from "@/images/logo.png";
-import hamberger_menu from "@/svg/hamberger_menu.png";
 import Link from "next/link";
 function Header() {
   return (
-    <div className="flex justify-between items-center mx-[31px]">
+    <div className="flex justify-between items-center mx-[31px] my-3">
       <Image
-        className="sm:hidden w-[40px] h-[40px] mt-[25px] border border-[#28a745] rounded-[8px]"
+        className="sm:hidden w-[40px] h-[40px] border border-[#28a745] rounded-[8px]"
         src={login}
         width={24}
         height={24}
@@ -17,12 +15,12 @@ function Header() {
         priority
       />
       <div className="hidden sm:flex w-full mx-auto mt-2 justify-between ">
-        <div className="flex text-lg text-[#28a745] font-medium leading-1 items-center border-2 border-[#28a745] rounded-md">
+        <div className="flex text-lg text-[#28a745] font-medium leading-1 items-center border-2 border-[#28a745] rounded-md px-2">
           <span>ورود | ثبت نام</span>
           <Image src={profile} width={24} height={24} alt="profile" />
         </div>
-        <nav className="mt-6">
-          <ul className="flex justify-between mx-1">
+        <nav className="mt-2">
+          <ul className="flex justify-between gap-3">
             <li>
               <Link href="#">تماس با ما</Link>
             </li>
