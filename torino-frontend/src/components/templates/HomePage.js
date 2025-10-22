@@ -5,7 +5,7 @@ import BuyWithPhone from "../modules/BuyWithPhone";
 
 async function HomePage() {
   const data = await serverFetch("/tour", {}, {cache: "no-store"})
-  console.log(data)
+  // console.log(data)
   return (
     <>
       <SearchPage />

@@ -4,15 +4,15 @@ import call from "@/svg/call.svg";
 
 function BuyWithPhone() {
   return (
-    <div className="w-[327px] h-[190px] mt-9 mx-auto border-1 border-gray-300 rounded-lg">
-      <div className="bg-[#28A745] w-full h-[128px] rounded-t-lg relative">
+    <div className="w-[327px] h-[190px] mt-9 mx-auto border-1 border-gray-300 rounded-lg md:w-[1188px] md:h-[250px] md:flex-reverse">
+      <div className="bg-[#28A745] w-full h-[128px] rounded-t-lg relative md:w-6/8 md:h-full ">
         <div className="flex">
           <Image
             src={buyPhone}
             width={198}
             height={120}
             priority
-            className="mt-[-32px]"
+            className="mt-[-32px] md:mt-[88px]"
             alt="buy phone"
           />
           <div className="text-right pt-3 text-white justify-end absolute right-3">
