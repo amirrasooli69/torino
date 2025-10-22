@@ -1,6 +1,7 @@
 import { serverFetch } from "@/core/services/http";
 import SearchPage from "./SearchPage";
 import TourListPage from "./TourListPage";
+import BuyWithPhone from "../modules/BuyWithPhone";
 
 async function HomePage() {
   const data = await serverFetch("/tour", {}, {cache: "no-store"})
@@ -9,6 +10,7 @@ async function HomePage() {
     <>
       <SearchPage />
       <TourListPage tourData={data}/>
+      <BuyWithPhone />
     </>
   );
 }

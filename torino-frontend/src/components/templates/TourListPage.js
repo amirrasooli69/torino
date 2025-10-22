@@ -1,5 +1,7 @@
 import React from "react";
-import TourCard from "../modules/TourCard";
+import TourCard from "@/components/modules/TourCard";
+import Image from "next/image";
+import arrowDown from "../../../public/svg/arrowDown.svg";
 
 function TourListPage({ tourData }) {
   if (!tourData.length) return <p>نتیجه یافت نشد</p>;
@@ -10,6 +12,11 @@ function TourListPage({ tourData }) {
         {tourData?.map((item) => (
           <TourCard key={item.id} {...item} />
         ))}
+      </div>
+      <div className="md:hidden flex gap-1 cursor-pointer justify-center mt-2">
+        {/* <img src={arrowDown} alt="arrow" className="w-3 h-3"/> */}
+        <Image src={arrowDown} alt="" />
+        <span className="text-3 text-gray-400"> مشاهده بیشتر</span>
       </div>
     </div>
   );
