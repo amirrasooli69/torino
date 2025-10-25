@@ -28,7 +28,7 @@ function BuyWithPhone() {
           <button className="bg-[#10411B] ronded-lg text-white font-thin text-[14px] rounded-lg px-5 py-1">اطلاعات بیشتر</button>
 
           <div className="flex gap-x-2">
-            <Image src={call} />
+            <Image src={call} width={20} height={20} alt="phone"/>
             <span className=" text-[20px] font-semibold ">021-1840</span>
           </div>
         </div>

@@ -14,7 +14,7 @@ function DatePickerCustom() {
       onChange={(e) => setDate([e.from, e.to])}
       range
       accentColor="#28A745"
-      inputClass="w-[328px] h-[47px] border border-[#00000026] rounded-xl text-center"
+      inputClass="w-[328px] h-[47px] border border-[#00000026] rounded-xl text-center md:border-none"
       weekends={[6]}
       round="x4"
       position="center"
