@@ -8,7 +8,8 @@
       "@/templates/*": ["/src/components/templates/*"],
       "@/svg/*": ["/public/svg/*"],
       "@/images/*": ["/public/images/*"],
-      "@/utils/*": ["/src/core/utils/*"]
+      "@/utils/*": ["/src/core/utils/*"],
+      "@/core/*": ["/src/core/*"]
     }
   }
 }

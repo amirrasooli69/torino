@@ -23,6 +23,7 @@ function Header() {
         height={24}
         alt="register"
         priority
+        onClick={()=> setIsOpen(true)}
       />
       <div className="hidden md:flex w-full mx-auto mt-2 justify-between ">
         <div className="flex text-lg text-[#28a745] font-medium leading-1 items-center border-2 border-[#28a745] rounded-md px-2">
