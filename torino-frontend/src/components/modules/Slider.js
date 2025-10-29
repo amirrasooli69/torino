@@ -28,7 +28,7 @@ function Slider() {
   }, [images.length]);
 
   return (
-    <div className="w-[334px] mt-20  mx-auto md:w-full ">
+    <div className="w-[334px] mt-20 md:w-full md:max-w-[1188px] mx-auto">
       <Image
         src={backgroundQuestion}
         width={150}

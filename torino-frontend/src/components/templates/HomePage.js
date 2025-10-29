@@ -8,7 +8,7 @@ async function HomePage() {
   const data = await serverFetch("/tour", {}, {cache: "no-store"})
   // console.log(data)
   return (
-    <div className="md:max-w-[1188px] mx-auto">
+    <div className="">
       <SearchPage />
       <TourListPage tourData={data}/>
       <BuyWithPhone />

@@ -1,10 +1,11 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import login from "@/svg/login.svg";
 import profile from "@/images/profile.png";
 import logo from "@/images/logo.png";
-import Link from "next/link";
-import { useState } from "react";
 import ModalContainer from "@/components/partials/container/ModalContainer";
 import SendOTPForm from "./SendOTPForm";
 import CheckOTPForm from "./CheckOTPForm";

@@ -6,8 +6,8 @@ import arrowDown from "../../../public/svg/arrowDown.svg";
 function TourListPage({ tourData }) {
   if (!tourData.length) return <p>نتیجه یافت نشد</p>;
   return (
-    <div className="mt-5 ">
-      <p className="text-lg mt-1 mr-15 text-right mb-3 ">همه تورها</p>
+    <div className="mt-5 md:max-w-[1188px] mx-auto">
+      <p className="text-lg mt-1 text-right mb-3 ">همه تورها</p>
       <div className="flex flex-wrap justify-center gap-3">
         {tourData?.map((item) => (
           <TourCard key={item.id} {...item} />
