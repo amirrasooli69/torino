@@ -13,6 +13,7 @@ async function HomePage() {
       <TourListPage tourData={data}/>
       <BuyWithPhone />
       <Slider />
+      
     </div>
   );
 }

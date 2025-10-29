@@ -28,13 +28,13 @@ function Slider() {
   }, [images.length]);
 
   return (
-    <div className="w-[334px] mt-20  mx-auto md:w-full  ">
+    <div className="w-[334px] mt-20  mx-auto md:w-full ">
       <Image
         src={backgroundQuestion}
         width={150}
         height={40}
         alt="question"
-        className=""
+        className="block ml-auto mb-3"
       />
       <div className="flex gap-5 md:flex-row-reverse">
         <div className="hidden mt-5 md:flex md:flex-col w-1/2 ml-auto ">
@@ -49,30 +49,42 @@ function Slider() {
             تاریخی را خریداری کنید.
           </p>
         </div>
-        <div className="mx-auto  rounded-3xl">
-          <div className="relative w-[300px] h-[200px] sm:w-[400px] sm:h-[300px] overflow-hidden rounded-lg shadow-lg">
-            {images.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={`Slide ${index + 1}`}
-                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 rounded-[35px] ${
-                  index === current ? "opacity-100" : "opacity-0"
-                }`}
-              />
-            ))}
+
+        <div className="flex flex-col items-center justify-center mt-10 mx-10">
+          <div className="relative w-[300px] h-[220px] sm:w-[400px] sm:h-[300px]">
+            {images.map((img, index) => {
+              const offset = (index - current + images.length) % images.length;
+              const translate = -offset * 60;
+              const scale = 1 - offset * 0.1;
+              const zIndex = images.length - offset;
+
+              return (
+                <img
+                  key={index}
+                  src={img}
+                  alt=""
+                  className={`absolute top-0 left-0 w-full h-full object-cover rounded-2xl shadow-lg transition-all duration-700 ease-in-out`}
+                  style={{
+                    transform: `translateX(${translate}px) scale(${scale})`,
+                    zIndex,
+                    opacity: offset > 2 ? 0 : 1,
+                  }}
+                />
+              );
+            })}
           </div>
+
           <div className="flex items-center justify-center gap-6 mt-4">
             <button onClick={prevSlide} className="hover:cursor-pointer">
-              <ArrowLeft className="w-6 h-6 text-gray-800" />
+              <ArrowLeft className="w-5 h-5 text-gray-700" />
             </button>
 
-            <span className="text-gray-700 font-medium text-sm">
+            <span className="text-gray-700 text-sm font-medium">
               {current + 1} / {images.length}
             </span>
 
             <button onClick={nextSlide} className="hover:cursor-pointer">
-              <ArrowRight className="w-6 h-6 text-gray-800" />
+              <ArrowRight className="w-5 h-5 text-gray-700" />
             </button>
           </div>
         </div>

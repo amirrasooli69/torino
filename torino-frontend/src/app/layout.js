@@ -1,6 +1,7 @@
 import Header from "@/components/modules/Header";
 import "./globals.css";
 import { yekan } from "@/utils/fonts";
+import Footer from "@/components/modules/Footer";
 
 export const metadata = {
   title: "Torino App",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={yekan.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
