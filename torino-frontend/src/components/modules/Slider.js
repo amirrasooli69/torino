@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import backgroundQuestion from "@/svg/backgroundQuestion.svg";
 
@@ -28,15 +28,15 @@ function Slider() {
   }, [images.length]);
 
   return (
-    <div className="m-12 md:mt-50">
+    <div className="w-[334px] mt-20  mx-auto md:w-full  ">
       <Image
         src={backgroundQuestion}
         width={150}
         height={40}
         alt="question"
-        className="ml-auto block"
+        className=""
       />
-      <div className="flex gap-5 sm:flex-row-reverse">
+      <div className="flex gap-5 md:flex-row-reverse">
         <div className="hidden mt-5 md:flex md:flex-col w-1/2 ml-auto ">
           <p className="text-right text-[24px] font-medium">
             تور طبیعت گردی و تاریخی{" "}
@@ -49,34 +49,31 @@ function Slider() {
             تاریخی را خریداری کنید.
           </p>
         </div>
-        <div className="relative w-[300px] h-[200px] sm:w-[400px] sm:h-[300px] overflow-hidden rounded-lg shadow-lg">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Slide ${index + 1}`}
-              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
-                index === current ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-1 shadow"
-          >
-            <ChevronLeft className="w-5 h-5 text-gray-800" />
-          </button>
+        <div className="mx-auto  rounded-3xl">
+          <div className="relative w-[300px] h-[200px] sm:w-[400px] sm:h-[300px] overflow-hidden rounded-lg shadow-lg">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Slide ${index + 1}`}
+                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 rounded-[35px] ${
+                  index === current ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
+          </div>
+          <div className="flex items-center justify-center gap-6 mt-4">
+            <button onClick={prevSlide} className="hover:cursor-pointer">
+              <ArrowLeft className="w-6 h-6 text-gray-800" />
+            </button>
 
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-1 shadow"
-          >
-            <ChevronRight className="w-5 h-5 text-gray-800" />
-          </button>
+            <span className="text-gray-700 font-medium text-sm">
+              {current + 1} / {images.length}
+            </span>
 
-          {/* شماره اسلاید */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/50 text-white text-sm px-3 py-1 rounded-full">
-            {current + 1} / {images.length}
+            <button onClick={nextSlide} className="hover:cursor-pointer">
+              <ArrowRight className="w-6 h-6 text-gray-800" />
+            </button>
           </div>
         </div>
       </div>
